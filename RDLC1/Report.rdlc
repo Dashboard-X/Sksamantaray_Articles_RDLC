@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="NorthwindConnectionString">
+      <rd:DataSourceID>e0873401-3998-47e3-aad7-cc5fe6c4444d</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>1in</RightMargin>
+  <LeftMargin>1in</LeftMargin>
+  <BottomMargin>1in</BottomMargin>
+  <rd:ReportID>66ab274c-241d-4b00-950e-f9b56d34c340</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet1_Employees">
+      <Fields>
+        <Field Name="EmployeeID">
+          <DataField>EmployeeID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="LastName">
+          <DataField>LastName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FirstName">
+          <DataField>FirstName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Title">
+          <DataField>Title</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TitleOfCourtesy">
+          <DataField>TitleOfCourtesy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BirthDate">
+          <DataField>BirthDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="HireDate">
+          <DataField>HireDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Address">
+          <DataField>Address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Region">
+          <DataField>Region</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PostalCode">
+          <DataField>PostalCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Country">
+          <DataField>Country</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HomePhone">
+          <DataField>HomePhone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Extension">
+          <DataField>Extension</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Photo">
+          <DataField>Photo</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="Notes">
+          <DataField>Notes</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportsTo">
+          <DataField>ReportsTo</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PhotoPath">
+          <DataField>PhotoPath</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>NorthwindConnectionString</DataSourceName>
+        <CommandText>select top 10 * from employees</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSet1</rd:DataSetName>
+        <rd:TableName>Employees</rd:TableName>
+        <rd:TableAdapterName>EmployeesTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Width>15.50001in</Width>
+  <Body>
+    <ReportItems>
+      <Table Name="table1">
+        <DataSetName>DataSet1_Employees</DataSetName>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="FirstName">
+                      <rd:DefaultName>FirstName</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!FirstName.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="LastName">
+                      <rd:DefaultName>LastName</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!LastName.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="City">
+                      <rd:DefaultName>City</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!City.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Country">
+                      <rd:DefaultName>Country</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Country.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="PostalCode">
+                      <rd:DefaultName>PostalCode</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!PostalCode.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox1">
+                      <rd:DefaultName>textbox1</rd:DefaultName>
+                      <Style>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>First Name</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Last Name</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>City</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <rd:DefaultName>textbox10</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Country</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox5">
+                      <rd:DefaultName>textbox5</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Postal Code</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>5in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>4in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.16667in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.16667in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.16667in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.5in</Height>
+      </Table>
+    </ReportItems>
+    <Height>0.75in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>
